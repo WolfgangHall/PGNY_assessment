@@ -78,8 +78,6 @@ def adjustPriceMeanAvg(coin_id: str, ten_day_price: float):
         item.last_updated = datetime.now(timezone.utc)
 
 def triggerPotentialBuyOption(coin_id: str, coin_price: float, ten_day_price: float):
-    coin_price = .99
-    ten_day_price = 1.02
     if (coin_price < ten_day_price):
         output = "Purchasing 1 order of {} at {} ...".format(coin_id, coin_price)
         print(output)
